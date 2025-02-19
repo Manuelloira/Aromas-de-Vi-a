@@ -79,12 +79,13 @@ nav ul li a:hover {
     --bg-dark: #707070;
     --clr: #58bc82;
     --clr-alpha: #9c9c9c60;
-    display: flex;
+    display:flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     gap: 1rem;
     width: 100%;
     max-width: 500px;
+    
   }
   
   .form .input-span {

@@ -1,160 +1,246 @@
-/* Estilos generales */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #E8EBEF;
-    background-color: #040200;
-}
 
-/* Navegación */
-nav {
-    background-color: rgba(4, 2, 0, 0.9);
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #FFF07E;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #BF5D03;
-}
 
 /* Sección principal con imagen de fondo */
 .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
 }
 
 .hero img.background-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero .overlay {
-    background: rgba(4, 2, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
+  background: rgba(4, 2, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    color: #FFF07E;
-    margin: 0;
+  font-size: 48px;
+  color: #FFF07E;
+  margin: 0;
 }
 
 .hero p {
-    font-size: 22px;
-    color: #E8EBEF;
+  font-size: 22px;
+  color: #E8EBEF;
 }
 
-/* From Uiverse.io by bociKond */ 
-.form {
-    --bg-light: #efefef;
-    --bg-dark: #707070;
-    --clr: #58bc82;
-    --clr-alpha: #9c9c9c60;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    gap: 1rem;
-    width: 100%;
-    max-width: 500px;
-    
-  }
-  
-  .form .input-span {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .form input[type="email"],
-  .form input[type="password"] {
-    border-radius: 0.5rem;
-    padding: 1rem 0.75rem;
-    width: 100%;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--clr-alpha);
-    outline: 2px solid var(--bg-dark);
-  }
-  
-  .form input[type="email"]:focus,
-  .form input[type="password"]:focus {
-    outline: 2px solid var(--clr);
-  }
-  
-  .label {
-    align-self: flex-start;
-    color: var(--clr);
-    font-weight: 600;
-  }
-  
-  .form .submit {
-    padding: 1rem 0.75rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 3rem;
-    background-color: var(--bg-dark);
-    color: var(--bg-light);
-    border: none;
-    cursor: pointer;
-    transition: all 300ms;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  
-  .form .submit:hover {
-    background-color: var(--clr);
-    color: var(--bg-dark);
-  }
-  
-  .span {
-    text-decoration: none;
-    color: var(--bg-dark);
-  }
-  
-  .span a {
-    color: var(--clr);
-  }
-  
+/* Estilos del carrusel de vinos */
+.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: 50px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(4, 2, 0, 0.9);
-    color: #FFF07E;
+.carousel {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* Animación del carrusel */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Clonar contenido para efecto de loop */
+.carousel > * {
+  flex: 0 0 auto;
+}
+
+.card {
+  background: #FFF07E;
+  color: #040200;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #BF5D03;
+}
+
+/* Contenedor para los botones */
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between; /* Esto mueve el like a la derecha */
+  width: 100%;
+}
+
+/* Botón principal */
+.Btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
+/* Estilos del like-button */
+.like-wrapper {
+  --gap: 0.5em;
+  --radius: 0.35em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  --dot-bg: #212121;
+  --dot-color: #313131;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  border: 0.1em solid #313131;
+  padding: 0.5em;
+  border-radius: var(--radius);
+  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.check[type="checkbox"] {
+  display: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.5em;
+  fill: white;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.icon.active {
+  display: none;
+  fill: #f52121;
+}
+
+.check[type="checkbox"]:checked + .container .icon.active {
+  display: inline-block;
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.check[type="checkbox"]:checked + .container .icon.inactive {
+  display: none;
+}
+
+/* Animación de wiggle */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carousel-container {
+      max-width: 100%;
+  }
+
+  .card {
+      min-width: 200px;
+  }
 }

@@ -1,5 +1,8 @@
 
-
+/* FONDOS*/
+.login-page {
+  background-image: url('../Aromas-de-Vi-a/img/INICIOSESION_REGISTRO.jpg');
+}
 /* Sección principal con imagen de fondo */
 .hero {
   position: relative;

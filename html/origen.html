@@ -6,26 +6,92 @@
     <title>Aromas de Viña - Vinos</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body >
+<body>
+<!-- HEADER -->
+<header class="header">
+    <!-- Parte Izquierda: Idiomas -->
+    <div class="languages">
+        <button class="btn">ES</button>
+        <button class="btn">EN</button>
+        <button class="btn">FR</button>
+    </div>
+    
+    <!-- Parte Derecha: Barra de búsqueda, Carrito y Login -->
+    <div class="header-right">
+        <div class="search">
+            <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                </g>
+            </svg>
+            <input placeholder="Buscar" type="search" class="inputSearch">
+        </div>
+        
+        <div class="cart">
+            <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M7 4V2h10v2h2v2H5V6h2zm4 14c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-2h-4l-1-8H7l-1 8H2V6h2l1-4h14l1 4h2v10z"></path>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="login">
+            <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z"></path>
+                </g>
+            </svg>
+        </div>
+    </div>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="../html/index.html">Inicio</a></li>
-            <li><a href="../html/identidad.html">Identidad</a></li>
-            <li><a href="../html/terroirs.html">Terroirs</a></li>
-            <li><a href="../html/vinos.html">Vinos</a></li>
-            <li><a href="../html/origen.html">Origen</a></li>
-            <li><a href="../html/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
+    <!-- Barra de Navegación -->
+    <nav class="nav">
+    <div class="container">
+        <div class="btn">Inicio</div>
+        <div class="btn">Identidad</div>
+        <div class="btn">Nuestros vinos</div>
+        <div class="btn">Contacto</div>
+    </div>
+    </nav>  
     <section class="hero">
-        <img src="../img/pexels-technobulka-2909085.jpg" alt="Fondo Vinos" class="background-img">
-        <div class="overlay">
-            <h1>Nuestros Vinos</h1>
-            <p>Calidad y excelencia en cada botella</p>
+        <img src="../img/ORIGEN.jpg" alt="Fondo Vinos" class="background-img">
+        <div class="origen">
+            <h1>Nuestro Origen</h1>
+            <img src="../img/CEO.jpg" alt="Foto de Manuel Loira" class="ceo-img">            
+            <p>Manuel Loira es un joven visionario y un ferviente defensor de la rica tradición vinícola de Galicia, región emblemática por su  ancestral tradición  en la producción de vinos excepcionales. Criado entre las verdes colinas y los valles bañados por el Atlántico, Manuel siente en su alma la conexión profunda con la tierra que lo vio nacer, y desde muy temprana edad, supo que su destino estaba ligado a la viticultura.
+            </p>
+            <p>Con una formación rigurosa en enología y gestión de bodegas, Manuel Loira decidió emprender su propio camino con la fundación de Bodegas Da Viña, un proyecto audaz que fusiona la tradición milenaria de la viticultura gallega con las innovaciones más sofisticadas del mundo moderno. En sus tierras, ubicadas en el privilegiado paisaje de Galicia, se cultivan viñas que dan vida a vinos de incomparable calidad, cuyas características reflejan la riqueza del entorno natural que las acoge.</p>
         </div>
     </section>
-
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos Aromas de Viña, una bodega con encanto que ofrece vinos de calidad para los paladares más exigentes.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>Email: info@aromasdevina.com</li>
+                    <li>Teléfono: +34 123 456 789</li>
+                    <li>Dirección: Calle Viña, 20 - A Coruña, España</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">                
+                    <a href="#"><img src="../P7DIW_ICONS/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="../P7DIW_ICONS/whatsapp.svg" alt="Whatsapp"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aromas de Viña | Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>

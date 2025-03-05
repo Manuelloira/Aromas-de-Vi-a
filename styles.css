@@ -1,51 +1,9 @@
 
-/* FONDOS*/
-.login-page {
-  background-image: url('../Aromas-de-Vi-a/img/INICIOSESION_REGISTRO.jpg');
-}
-/* Sección principal con imagen de fondo */
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
-
-.hero img.background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.hero .overlay {
-  background: rgba(4, 2, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  color: #FFF07E;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 22px;
-  color: #E8EBEF;
-}
-
 /* Estilos del carrusel de vinos */
 .carousel-container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   max-width: 90%;
   margin: 50px auto;
   overflow: hidden;
@@ -76,7 +34,7 @@
 }
 
 .card {
-  background: #FFF07E;
+  background: white;
   color: #040200;
   border-radius: 10px;
   padding: 15px;
@@ -101,7 +59,7 @@
 .card p {
   font-size: 18px;
   font-weight: bold;
-  color: #BF5D03;
+  color: white;
 }
 
 /* Contenedor para los botones */
@@ -258,6 +216,8 @@
   width: 450px;
   border-radius: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 auto; /* Esto centra el formulario horizontalmente */
+
 }
 
 ::placeholder {
@@ -361,5 +321,231 @@
   border: 1px solid #2d79f3;
   ;
 }
+/* Estilo general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    
+body {
+  font-family: cinzel, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.languages {
+  display: flex;
+}
+
+.languages .btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.languages .btn:hover {
+  background-color: #555;
+}
+
+/* Parte Derecha: Barra de búsqueda, Carrito y Login */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search .icono {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.search .inputSearch {
+  padding: 8px 15px;
+  font-size: 16px;
+}
+
+.cart, .login {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.cart .icono, .login .icono {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.cart:hover, .login:hover {
+  color: #ddd;
+}
+
+/* Barra de Navegación */
+.nav {
+  background-color: #444; /* Fondo fijo */
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 15px;
+  font-size: 16px;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+}
+
+.btn:hover {
+  background-color: #444; /* Sin cambio de color en hover */
+}
+
+/* Sección Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position:absolute;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay h1, .overlay p {
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 50px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #777;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+}
+
+/* Posiciona el contenedor de contenido a la derecha */
+.origen {
+  position: absolute;
+  top: 50%;
+  right: 5%;            /* Ajusta este valor para moverlo horizontalmente */
+  transform: translateY(-50%);
+  z-index: 2;           /* Para que aparezca sobre la imagen de fondo */
+  text-align: right;    /* Alinea el texto a la derecha */
+  max-width: 40%;       /* Limita el ancho para no ocupar toda la sección */
+}
+
+/* Opcional: Si deseas que el texto se lea mejor sobre la imagen */
+.origen h1,
+.origen p {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Estilos para la imagen de la foto (CEO) */
+.origen .ceo-img {
+  display: block;
+  margin: 0 0 20px auto; /* Se alinea a la derecha */
+  width: 100%;
+  max-width: 200px;      /* Ajusta el tamaño deseado */
+  border-radius: 10px;
+}
+

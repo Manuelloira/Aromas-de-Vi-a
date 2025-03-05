@@ -6,9 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles.css">
 
-, bºc   x1zº</head>
+</head>
+
 <body class="login-page">    
-           
+           <!-- HEADER -->
+<header class="header">
+  <!-- Parte Izquierda: Idiomas -->
+  <div class="languages">
+      <button class="btn">ES</button>
+      <button class="btn">EN</button>
+      <button class="btn">GZ</button>
+  </div>
+
+  <!-- Parte Derecha: Barra de búsqueda, Carrito y Login -->
+  <div class="header-right">
+      <div class="search">
+          <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                  <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+              </g>
+          </svg>
+          <input placeholder="Buscar" type="search" class="inputSearch">
+      </div>
+
+      <div class="cart">
+          <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                  <path d="M7 4V2h10v2h2v2H5V6h2zm4 14c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0-2h-4l-1-8H7l-1 8H2V6h2l1-4h14l1 4h2v10z"></path>
+              </g>
+          </svg>
+      </div>
+
+      <div class="login">
+          <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z"></path>
+              </g>
+          </svg>
+      </div>
+  </div>
+</header>
+
+<!-- Barra de Navegación -->
+<nav class="nav">
+  <div class="container">
+      <div class="btn">Inicio</div>
+      <div class="btn">Identidad</div>
+      <div class="btn">Nuestros vinos</div>
+      <div class="btn">Contacto</div>
+  </div>
+</nav>
+
     <!-- From Uiverse.io by JohnnyCSilva --> 
 <form class="form">
     <div class="flex-column">
@@ -28,7 +76,7 @@
     <div class="flex-row">
       <div>
       <input type="radio">
-      <label>Recordar mis datos </label>
+      <label>Recordar mis datos </label> 
       </div>
       <span class="span">¿Olvidaste la contraseña?</span>
     </div>
@@ -63,5 +111,34 @@
         Apple 
         
 </button></div></form>
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>Sobre Nosotros</h3>
+          <p>Somos Aromas de Viña, una bodega con encanto que ofrece vinos de calidad para los paladares más exigentes.</p>
+      </div>
+
+      <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+              <li>Email: info@aromasdevina.com</li>
+              <li>Teléfono: +34 123 456 789</li>
+              <li>Dirección: Calle Viña, 25 - Madrid, España</li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">                
+            <a href="#"><img src="../P7DIW_ICONS/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="../P7DIW_ICONS/whatsapp.svg" alt="Whatsapp"></a>
+        </div>
+    </div>
+</div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2025 Aromas de Viña | Todos los derechos reservados</p>
+  </div>
+</footer>
 </body>
 </html>

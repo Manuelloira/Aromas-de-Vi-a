@@ -330,8 +330,7 @@
 }
 
 body {
-  font-family: cinzel, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Cinzel', serif; /* Tipografía Cinzel */
 }
 
 /* HEADER */
@@ -342,8 +341,12 @@ body {
   padding: 20px;
   background-color: #333;
   color: white;
-  position: relative;
-  z-index: 10;
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0; /* Ocupa todo el ancho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  width: 100%; /* Ocupa el 100% del ancho */
 }
 
 .languages {
@@ -405,28 +408,35 @@ body {
 
 /* Barra de Navegación */
 .nav {
-  background-color: #444; /* Fondo fijo */
+  background-color: #444;
   padding: 10px 0;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
-.container {
+.nav .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.btn {
+.nav .btn {
   color: white;
   padding: 10px 20px;
   cursor: pointer;
   margin: 0 15px;
   font-size: 16px;
-  background-color: transparent; /* Fondo transparente */
-  border: none; /* Sin borde */
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
 }
 
-.btn:hover {
-  background-color: #444; /* Sin cambio de color en hover */
+.nav .btn:hover {
+  background-color: #555;
 }
 
 /* Sección Hero */
@@ -444,17 +454,38 @@ body {
 }
 
 .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute; /* Cambiamos a posición absoluta */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centro */
   color: white;
   text-align: center;
   z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Efecto de difuminado */
+  width: 80%; /* Ancho del overlay */
+  max-width: 800px; /* Ancho máximo */
 }
 
-.overlay h1, .overlay p {
-  margin: 0;
+.overlay h1 {
+  font-size: 4rem; /* Tamaño grande para el título */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 4px; /* Espaciado entre letras */
+  color: #ffffff; /* Color blanco */
+}
+
+.overlay p {
+  font-size: 1.5rem; /* Tamaño mediano para el subtítulo */
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 2px; /* Espaciado entre letras */
+  color: #f4f4f4; /* Color gris claro */
 }
 
 /* Footer */

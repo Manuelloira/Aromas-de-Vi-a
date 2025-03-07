@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cinzel', serif; /* Tipografía Cinzel */
     background-image: url("../img/bodega.jpg");
     background-size: cover;
     background-position: center;
@@ -19,7 +19,6 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
 /* HEADER */
 .header {
     display: flex;
@@ -28,12 +27,12 @@ body {
     padding: 20px;
     background-color: #333;
     color: white;
-    position: fixed;
+    position: fixed; /* Fija el header en la parte superior */
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
+    right: 0; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 100%; /* Ocupa el 100% del ancho */
 }
 
 .languages {
@@ -103,15 +102,15 @@ body {
     right: 0;
     z-index: 1000;
     width: 100%;
-}
-
-.nav .container {
+  }
+  
+  .nav .container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.nav .btn {
+  }
+  
+  .nav .btn {
     color: white;
     padding: 10px 20px;
     cursor: pointer;
@@ -120,11 +119,11 @@ body {
     background-color: transparent;
     border: none;
     text-decoration: none;
-}
-
-.nav .btn:hover {
+  }
+  
+  .nav .btn:hover {
     background-color: #555;
-}
+  }
 
 /* FOOTER */
 .footer {

@@ -10,7 +10,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* HEADER */
+/* Estilos para el header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -26,26 +26,30 @@ body {
   width: 100%;
 }
 
+/* Estilos para el logo */
+.logo {
+  flex: 1; /* Ocupa el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra el logo horizontalmente */
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+.logo img {
+  max-height: 50px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la proporción */
+}
+
+/* Estilos para los botones de idioma */
 .languages {
   display: flex;
+  gap: 10px; /* Espacio entre botones */
 }
 
-.languages .btn {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.languages .btn:hover {
-  background-color: #555;
-}
-
+/* Estilos para la parte derecha del header */
 .header-right {
   display: flex;
   align-items: center;
+  gap: 20px; /* Espacio entre elementos */
 }
 
 .search {

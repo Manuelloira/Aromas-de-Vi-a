@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../styles.css"> 
     <link rel="stylesheet" href="../contacto.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <!-- HEADER -->
@@ -18,10 +17,10 @@
             <button class="btn">EN</button>
             <button class="btn">FR</button>
         </div>
-                <!-- Logo Centrado -->
-                <div class="logo">
-                    <img src="../img/image.png" alt="Logo de Aromas de Viña">
-                </div>
+        <!-- Logo Centrado -->
+        <div class="logo">
+            <img src="../img/image.png" alt="Logo de Aromas de Viña">
+        </div>
         <!-- Parte Derecha: Barra de búsqueda, Carrito y Login -->
         <div class="header-right">
             <div class="search">
@@ -32,7 +31,6 @@
                 </svg>
                 <input placeholder="Buscar" type="search" class="inputSearch">
             </div>
-            
             <div class="cart">
                 <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
                     <g>
@@ -40,7 +38,6 @@
                     </g>
                 </svg>
             </div>
-            
             <a href="../html/login.html" class="login">
                 <svg class="icono" aria-hidden="true" viewBox="0 0 24 24">
                     <g>
@@ -63,24 +60,25 @@
 
     <!-- Sección de Contacto -->
     <section class="contacto">
-        <h1>Contacta con Nosotros</h1>
-        <p>¿Tienes alguna pregunta o comentario? ¡Nos encantaría escucharte!</p>
-        
-        <form class="formulario-contacto">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-        </form>
+        <div class="form-container">
+            <h1>Contacta con Nosotros</h1>
+            <p>¿Tienes alguna pregunta o comentario? ¡Nos encantaría escucharte!</p>
+            <form class="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -90,7 +88,6 @@
                 <h3>Sobre Nosotros</h3>
                 <p>Somos Aromas de Viña, una bodega con encanto que ofrece vinos de calidad para los paladares más exigentes.</p>
             </div>
-    
             <div class="footer-section">
                 <h3>Contacto</h3>
                 <ul>
@@ -99,7 +96,6 @@
                     <li>Dirección: Calle Viña, 20 - A Coruña, España</li>
                 </ul>
             </div>
-    
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <div class="social-icons">                
@@ -108,7 +104,6 @@
                 </div>
             </div>
         </div> 
-    
         <div class="footer-bottom">
             <p>&copy; 2025 Aromas de Viña | Todos los derechos reservados</p>
         </div>

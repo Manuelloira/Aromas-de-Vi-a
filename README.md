@@ -1,1 +1,3 @@
-# Aromas-de-Vi-a
+# Práctica Accesibilidad Web - Aromas de Viña
+
+Este repositorio contiene el código y la documentación para la práctica de accesibilidad web del curso de Desarrollo de Interfaces Web (DIW). El proyecto consiste en la creación de una página web accesible para una bodega ficticia llamada **Aromas de Viña**, que cumple con los estándares de accesibilidad WCAG y está diseñada para ser inclusiva para todos los usuarios.

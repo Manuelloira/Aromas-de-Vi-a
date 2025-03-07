@@ -1,250 +1,53 @@
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0;
-    left: 0;
-    right: 0; /* Ocupa todo el ancho */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    width: 100%; /* Ocupa el 100% del ancho */
-}
-
-.languages {
-    display: flex;
-}
-
-.languages .btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.languages .btn:hover {
-    background-color: #555;
-}
-
-/* Parte Derecha: Barra de búsqueda, Carrito y Login */
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-.search {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-.search .icono {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.search .inputSearch {
-    padding: 8px 15px;
-    font-size: 16px;
-}
-
-.cart, .login {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.cart .icono, .login .icono {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.cart:hover, .login:hover {
-    color: #ddd;
-}
-
-/* Barra de Navegación */
-.nav {
-    background-color: #444;
-    padding: 10px 0;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-  }
-  
-  .nav .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nav .btn {
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin: 0 15px;
-    font-size: 16px;
-    background-color: transparent;
-    border: none;
-    text-decoration: none;
-  }
-  
-  .nav .btn:hover {
-    background-color: #555;
-  }
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
-    position: relative; /* Cambia a relative si no quieres que sea fijo */
-    bottom: 0;
-    left: 0;
-    right: 0; /* Ocupa todo el ancho */
-    width: 100%; /* Ocupa el 100% del ancho */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 50px;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 20px;
-    min-width: 250px;
-}
-
-.footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #777;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.footer-section p, .footer-section ul {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #555;
-    font-size: 14px;
-}
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-
-        font-family: 'Cinzel', serif; /* Tipografía Cinzel */
-    background-image: url("../img/bodega.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
-}
+/* Estilos específicos para la página de Origen */
 
 /* Estilos para la sección hero */
 .hero {
     position: relative;
-    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
     overflow: hidden;
-    margin-top: 120px; /* Ajusta según la altura del header y nav */
-    margin-bottom: 60px; /* Ajusta según el footer */
 }
 
 .background-img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
+/* Contenedor del contenido de Origen */
 .origen {
-    position: relative;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para mejorar la legibilidad */
     padding: 40px;
     border-radius: 10px;
     max-width: 1200px;
-    width: 90%;
-    color: white;
-    text-align: center;
+    margin: 0 auto;
 }
 
 .titulo-origen {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
+/* Contenedor del contenido (imagen + texto) */
 .contenido-origen {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 40px;
+    margin-top: 30px;
 }
 
+/* Estilos para la imagen del CEO */
 .imagen-origen {
     flex: 1;
     max-width: 300px;
@@ -252,43 +55,39 @@ body {
 
 .ceo-img {
     width: 100%;
-    height: auto;
-    border-radius: 5%;
-    border: 4px solid white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilos para el texto descriptivo */
 .texto-origen {
     flex: 2;
     text-align: left;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #f4f4f4;
 }
 
 .texto-origen p {
     margin-bottom: 20px;
 }
 
-/* Responsive Design */
+/* Responsividad */
 @media (max-width: 768px) {
     .contenido-origen {
         flex-direction: column;
         text-align: center;
     }
 
+    .imagen-origen {
+        max-width: 100%;
+    }
+
     .texto-origen {
         text-align: center;
     }
 
-    .ceo-img {
-        max-width: 200px;
-    }
-
-    .header, .nav {
-        position: static; /* En móviles, el header y nav no son fijos */
-    }
-
-    .hero {
-        margin-top: 20px; /* Ajusta el margen superior en móviles */
+    .titulo-origen {
+        font-size: 2rem;
     }
 }

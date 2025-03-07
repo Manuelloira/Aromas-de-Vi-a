@@ -1,328 +1,4 @@
-
-/* Estilos del carrusel de vinos */
-.carousel-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 90%;
-  margin: 50px auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.carousel {
-  display: flex;
-  gap: 15px;
-  width: max-content;
-  animation: scroll 40s linear infinite;
-}
-
-/* Animación del carrusel */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* Clonar contenido para efecto de loop */
-.carousel > * {
-  flex: 0 0 auto;
-}
-
-.card {
-  background: white;
-  color: #040200;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  min-width: 250px;
-  max-width: 300px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
-  margin-top: 20em;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  height: auto;
-}
-
-.card h3 {
-  margin: 10px 0 5px;
-  font-size: 20px;
-}
-
-.card p {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Contenedor para los botones */
-.button-group {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between; /* Esto mueve el like a la derecha */
-  width: 100%;
-}
-
-/* Botón principal */
-.Btn {
-  width: 130px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(15, 15, 15);
-  border: none;
-  color: white;
-  font-weight: 600;
-  gap: 8px;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
-  position: relative;
-  overflow: hidden;
-  transition-duration: .3s;
-}
-
-.Btn::before {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  content: "";
-  background-color: white;
-  border-radius: 50%;
-  left: -100%;
-  top: 0;
-  transition-duration: .3s;
-  mix-blend-mode: difference;
-}
-
-.Btn:hover::before {
-  transition-duration: .3s;
-  transform: translate(100%,-50%);
-  border-radius: 0;
-}
-
-.Btn:active {
-  transform: translate(5px,5px);
-  transition-duration: .3s;
-}
-
-/* Estilos del like-button */
-.like-wrapper {
-  --gap: 0.5em;
-  --radius: 0.35em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  --dot-bg: #212121;
-  --dot-color: #313131;
-  --dot-size: 1px;
-  --dot-space: 22px;
-  background: linear-gradient(
-        90deg,
-        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-        transparent 1%
-      )
-      center / var(--dot-space) var(--dot-space),
-    linear-gradient(
-        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-        transparent 1%
-      )
-      center / var(--dot-space) var(--dot-space),
-    var(--dot-color);
-  border: 0.1em solid #313131;
-  padding: 0.5em;
-  border-radius: var(--radius);
-  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.check[type="checkbox"] {
-  display: none;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-top: -0.25em;
-  margin-bottom: -0.25em;
-}
-
-.icon {
-  width: 1.5em;
-  height: 1.5em;
-  margin-left: 0.5em;
-  fill: white;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.icon.active {
-  display: none;
-  fill: #f52121;
-}
-
-.check[type="checkbox"]:checked + .container .icon.active {
-  display: inline-block;
-  animation: wiggle 0.5s ease-in-out;
-}
-
-.check[type="checkbox"]:checked + .container .icon.inactive {
-  display: none;
-}
-
-/* Animación de wiggle */
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .carousel-container {
-      max-width: 100%;
-  }
-
-  .card {
-      min-width: 200px;
-  }
-}
-
-/* From Uiverse.io by JohnnyCSilva */ 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #ffffff;
-  padding: 30px;
-  width: 450px;
-  border-radius: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0 auto; /* Esto centra el formulario horizontalmente */
-
-}
-
-::placeholder {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.form button {
-  align-self: flex-end;
-}
-
-.flex-column > label {
-  color: #151717;
-  font-weight: 600;
-}
-
-.inputForm {
-  border: 1.5px solid #ecedec;
-  border-radius: 10px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-  transition: 0.2s ease-in-out;
-}
-
-.input {
-  margin-left: 10px;
-  border-radius: 10px;
-  border: none;
-  width: 100%;
-  height: 100%;
-}
-
-.input:focus {
-  outline: none;
-}
-
-.inputForm:focus-within {
-  border: 1.5px solid #2d79f3;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.flex-row > div > label {
-  font-size: 14px;
-  color: black;
-  font-weight: 400;
-}
-
-.span {
-  font-size: 14px;
-  margin-left: 5px;
-  color: #2d79f3;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.button-submit {
-  margin: 20px 0 10px 0;
-  background-color: #151717;
-  border: none;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 10px;
-  height: 50px;
-  width: 100%;
-  cursor: pointer;
-}
-
-.p {
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.btn {
-  margin-top: 10px;
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  gap: 10px;
-  border: 1px solid #ededef;
-  background-color: white;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-
-.btn:hover {
-  border: 1px solid #2d79f3;
-  ;
-}
-/* Estilo general */
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -330,7 +6,8 @@
 }
 
 body {
-  font-family: 'Cinzel', serif; /* Tipografía Cinzel */
+  font-family: 'Cinzel', serif;
+  background-color: #f4f4f4;
 }
 
 /* HEADER */
@@ -341,12 +18,12 @@ body {
   padding: 20px;
   background-color: #333;
   color: white;
-  position: fixed; /* Fija el header en la parte superior */
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0; /* Ocupa todo el ancho */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  width: 100%; /* Ocupa el 100% del ancho */
+  right: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .languages {
@@ -366,7 +43,6 @@ body {
   background-color: #555;
 }
 
-/* Parte Derecha: Barra de búsqueda, Carrito y Login */
 .header-right {
   display: flex;
   align-items: center;
@@ -439,61 +115,17 @@ body {
   background-color: #555;
 }
 
-/* Sección Hero */
-.hero {
-  position: relative;
-  height: 100vh;
-}
-
-.background-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position:absolute;
-
-}
-
-.overlay {
-  position: absolute; /* Cambiamos a posición absoluta */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta el centro */
-  color: white;
-  text-align: center;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  padding: 40px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px); /* Efecto de difuminado */
-  width: 80%; /* Ancho del overlay */
-  max-width: 800px; /* Ancho máximo */
-}
-
-.overlay h1 {
-  font-size: 4rem; /* Tamaño grande para el título */
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-transform: uppercase; /* Texto en mayúsculas */
-  letter-spacing: 4px; /* Espaciado entre letras */
-  color: #ffffff; /* Color blanco */
-}
-
-.overlay p {
-  font-size: 1.5rem; /* Tamaño mediano para el subtítulo */
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-  font-weight: 400;
-  letter-spacing: 2px; /* Espaciado entre letras */
-  color: #f4f4f4; /* Color gris claro */
-}
-
-/* Footer */
+/* FOOTER */
 .footer {
   background-color: #333;
   color: white;
   padding: 40px 0;
-  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .footer-container {
@@ -553,6 +185,3 @@ body {
   border-top: 1px solid #555;
   font-size: 14px;
 }
-
-
-
